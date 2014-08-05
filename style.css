@@ -2,6 +2,8 @@
 body, ul, li, div, span, input, textarea, header, footer, table, tr, td, img, button, form, fieldset, article, section {
 	margin: 0;
 	padding: 0;
+	font-family: "Roboto",Arial,sans-serif;
+	color: #737373;
 }
 
 body{
@@ -27,6 +29,10 @@ ul {
 .pl20 { padding-left: 20px; }
 .pl25 { padding-left: 25px; }
 .pl30 { padding-left: 30px; }
+.pl35 { padding-left: 35px; }
+.pl40 { padding-left: 40px; }
+.pl45 { padding-left: 45px; }
+.pl50 { padding-left: 50px; }
 
 .pt5 { padding-top: 5px; }
 .pt10 { padding-top: 10px; }
@@ -57,6 +63,10 @@ ul {
 .ml20 { margin-left: 20px; }
 .ml25 { margin-left: 25px; }
 .ml30 { margin-left: 30px; }
+.ml35 { margin-left: 35px; }
+.ml40 { margin-left: 40px; }
+.ml45 { margin-left: 45px; }
+.ml50 { margin-left: 50px; }
 
 .mt5 { margin-top: 5px; }
 .mt10 { margin-top: 10px; }
@@ -99,6 +109,8 @@ ul {
 .fs24 { font-size: 24px; }
 .fs28 { font-size: 28px; }
 
+.cp { cursor: pointer; }
+
 .fl { float: left; }
 .fr { float: right; }
 .fc:after { content:""; display:block; clear:both; }
@@ -111,6 +123,10 @@ ul {
 
 .bdZero { border: 0; }
 
+.hoverGray:hover {
+	background-color: #ddd;
+}
+
 .bgTransparent { background-color: transparent; }
 .bgWhite { background-color: #fff; }
 .bgDodgerBlue { background-color: #1E90FF; }
@@ -121,9 +137,27 @@ ul {
 .txtDodgerBlue { color: #1E90FF; }
 .txtDimGray { color: #696969; }
 
+/* 상단 전체 */
+.searchTop {
+	width : 100%;
+	min-width : 860px;
+	height: 58px;
+}
+
 /* 상단 가운데 검색창 */
 .searchCenterArea {
+	width : 80%;
+	width: -webkit-calc(100% - 543px);
+	width: -moz-calc(100% - 543px);
+	width: calc(100% - 543px);
 	min-width: 300px;
+}
+
+.searchBox {
+	width : 80%;
+	width: -webkit-calc(100% - 60px);
+	width: -moz-calc(100% - 60px);
+	width: calc(100% - 60px);
 }
 
 .searchCenterArea input {
@@ -136,6 +170,12 @@ ul {
 	width: -webkit-calc(100% - 8px);
 	width: -moz-calc(100% - 8px);
 	width: calc(100% - 8px);
+}
+.searchCenterArea input:hover {
+	border: 1px solid #999;
+}
+.searchCenterArea .searchButton {
+	margin-top: -3px;
 }
 
 .searchCenterArea button {
@@ -158,38 +198,162 @@ ul {
 	height: 30px;
 	width: 30px;
 	text-indent: -10000px;
+	margin: -1px;
 }
 
 /* 상단 오른쪽 */
 .searchRightArea {
-	width: 200px;
+	width: 260px;
 }
 .searchRightArea a {
+}
+.searchRightArea a.userName {
+	text-decoration: none;
+	color: #333;
+}
+.searchRightArea a.userName:hover {
+	text-decoration: underline;
+}
+.searchRightArea a.box {
 	background-image: url('http://ssl.gstatic.com/gb/images/v1_2e543709.png');
 	background-size: 112px 1828px;
 	background-position: -51px -452px;
 	opacity: .55;
+	cursor: default;
 }
+.searchRightArea a.bell {
+	background-image: url('http://ssl.gstatic.com/gb/images/v1_2e543709.png');
+	background-size: 112px 1828px;
+	background-position: 0 -69px;
+	opacity: .55;
+	cursor: default;
+}
+
 .searchRightArea a:hover {
 	opacity: 1;
+}
+
+.searchRightArea div.share {
+	background-clip: padding-box;
+	background-color: rgba(123,123,123,.1);
+	border-radius: 2px;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+}
+.searchRightArea div.share:hover {
+	background-color: rgba(123,123,123,.2);
+}
+.searchRightArea div.member {
+	width: 30px;
+	height: 30px;
+	position:relative;
+}
+.searchRightArea div.member span {
+	background-image:url(http://lh5.googleusercontent.com/-6fZFuHf5OX4/AAAAAAAAAAI/AAAAAAAAAAA/7JtVPdHTJ9o/s32-c/photo.jpg);
+	background-size: 32px 32px;
+	border-radius: 50%;
+	display: block;
+	margin: -1px;
+	height: 32px;
+	width: 32px;
+}
+
+.navi {
+	height: 48px;
+	line-height: 48px;
+}
+
+.menuList {
+	width: 200px;
+	height: 48px;
+	line-height: 48px;
+}
+
+.menuList ul {
+	display: block;
+	height: 192px;
+	background-color: rgba(245, 245, 245, 0.952941);
+	margin-top: 48px;
+}
+
+.menuList > span {
+	width: 24px;
+	height: 240px;
+	background: #fff;
+	position: absolute;
+	display: block;
+	z-index: 1;
+}
+
+.menuList > div {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 48px;
+	z-index: 2;
+}
+
+.dropDownIcon {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAjUlEQVQoz2P4//8/A7mYYYhrzs3N5SsqKsoE0jLYFGZmZgoWFhZmAYEEhmagxsri4uL/QPwYaIAyssbs7GxhoPwFkDyQnoOhGWiqLlDyA7oBaBp/AdW5YfVzfn6+ObIBeXl5xsgagXQA3gBDM+AnLo04QxtqwHeoAX+xacQbVUC/RQA1vQQF5HBNYeRgAKO6bfkUgtZHAAAAAElFTkSuQmCC);
+	background-position-y: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 15px;
+	margin: 17px 3px 1px 3px;
+	vertical-align: top;
+	width: 15px;
+}
+
+.naviSeperator {
+	width: 1px;
+	height: 28px;
+	height: -webkit-calc(100% - 20px);
+	height: -moz-calc(100% - 20px);
+	height: calc(100% - 20px);
+	margin: 10px 0;
+	border-left: 1.5px solid #ccc;
+}
+
+.naviOn {
+	height: 44px;
+	border-bottom: 4px solid #1E90FF;
+}
+
+.bookIcon {
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA40lEQVQoz+2RTRGDMBhEIyESKgEJSEACEioBB5GABCQgIRKQgITXQzc0QNIwbbl02Jlw+H72JYsBjDHGAB0w64zAADSmIKDW7Bjtd+o9P8AEtMBNg7GmsLAxbtSLNcjjLtACCPK6UaOBWCNgZd5verN2ankE7QBBTjcZEpAuc2uX8MkCQjS1nusTfa9Y60RUhwDxa2zmB7vC7iEAMivWLsAFuAD/DnAnANwC0HADzD8AzECr/gugQgX4LwAeqCK/NUBFC/QfAHrAbrz2gKjZhsgKgCWShEceEEf2BrCKJAs48zwAsmsx4ZbVwpEAAAAASUVORK5CYII=);
+	display: block;
+	height: 24px;
+	margin: 12px 0 0 28px;
+	width: 24px;
+}
+
+.naviLeftArrow {
+	top: 132px;
+	display: block;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAbklEQVQ4y2P4//8/Ay0xw6gFg98CbKCjo8MAiA8AcQHVLYAa/gGI/4MsoaoFaIaDaAOqWYBmOAgHgMSpYgEWwxNgFlNsAT7DqWXBBVyGDxkLaBtENI9kPMk0gaoW0Dyj0aWowFLYNYzWB6MWMAAAq1H3+Mhu2hQAAAAASUVORK5CYII=);
+	height: 24px;
+	position: absolute;
+	width: 24px;
 }
 
 /* 컨텐츠 */
 article {
 	width: 690px;
 	height: 100%;
-	padding-left: 150px;
+	padding-left: 280px;
 	padding-top: 20px;
 }
-article h1 {
-	font-size: 24px;
-	font-weight: bold;
+article > section > header > span {
+	font-size: 28px;
+	color: #333;
+	margin-top: 10px;
 }
 article section li {
 	border-radius: 2px;
 	width: 160px;
 	height: 330px;
-	padding: 0 2px 0 2px;
+	overflow: hidden;
 }
 article section li img {
 	width: 160px;
@@ -198,15 +362,32 @@ article section li img {
 article section li a {
 	text-decoration: none;
 }
+article section li a:hover {
+	text-decoration: underline;
+}
 article section li button {
 	border: 0;
+}
+
+.item > div:nth-child(1) {
+	height: 260px;
+	background-color: #f3f3f3;
+}
+.item a.imgOver {
+	position: absolute;
+	width: 160px;
+	height: 260px;
+	border-radius: 2px;
+}
+.item a.imgOver:hover {
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* footer */
 footer {
 	width: 100%;
 	height: 100%;
-	padding-left: 150px;
+	padding-left: 280px;
 	padding-top: 20px;
 }
 footer ul {
