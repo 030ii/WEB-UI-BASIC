@@ -56,6 +56,10 @@ ul {
 .mr20 { margin-right: 20px; }
 .mr25 { margin-right: 25px; }
 .mr30 { margin-right: 30px; }
+.mr35 { margin-right: 35px; }
+.mr40 { margin-right: 40px; }
+.mr45 { margin-right: 45px; }
+.mr50 { margin-right: 50px; }
 
 .ml5 { margin-left: 5px; }
 .ml10 { margin-left: 10px; }
@@ -134,8 +138,11 @@ ul {
 .txtWhite{ color: #fff; }
 .txtGray { color: #999; }
 .txtLightBlack { color: #333; }
+.txtDeepBlack { color: #555; }
 .txtDodgerBlue { color: #1E90FF; }
 .txtDimGray { color: #696969; }
+
+.ws{ white-space: nowrap;}
 
 /* 상단 전체 */
 .searchTop {
@@ -175,7 +182,7 @@ ul {
 	border: 1px solid #999;
 }
 .searchCenterArea .searchButton {
-	margin-top: -3px;
+	margin-top: -2px;
 }
 
 .searchCenterArea button {
@@ -205,8 +212,7 @@ ul {
 .searchRightArea {
 	width: 260px;
 }
-.searchRightArea a {
-}
+
 .searchRightArea a.userName {
 	text-decoration: none;
 	color: #333;
@@ -264,6 +270,90 @@ ul {
 	line-height: 48px;
 }
 
+.naviRightArea {
+	width: 170px;
+}
+
+.naviRightArea button {
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+	-ms-box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.17);
+	color: #737373;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Roboto",sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	height: 36px;
+	line-height: 34px;
+	min-width: 40px;
+	padding: 0 20px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	outline: none;
+	height: 30px;
+	line-height: 28px;
+	margin: 0px 10px;
+	padding: 0px;
+	top: 10px;
+}
+
+.naviRightArea button .buttonHelp {
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAwUlEQVQ4y9WU6w3DIAyEGcEjZIQOwBAdgdEyikfoAAyRDVwTgZQQPyDKj/akkyIEn2zOIRBReNrh/6GsxEY2dS5raQrKWtgfAda77FlcKOvF3gaAzZsE7qGnCgGAEJGayndZ6ytWofUOTweOwCNYqDhp0EsoTTHG3U1SeBrUvD8HShdoTVwFDrQvQmEEqgQlQ732rbY9KE7M53BQSTuUc95tQNWRgptQc/jfN9q2f1PWOgn0H5Qa1Forhkefvp99+b/H6ZOyGDEoawAAAABJRU5ErkJggg==);
+	background-position-y: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 21px;
+	margin: 3px 3px 1px 3px;
+	vertical-align: top;
+	width: 21px;
+}
+
+.naviRightArea button .buttonSetting {
+	border: 1px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAA3klEQVQ4y2NgGE4gEYj/I+FEahg6D83QuaQawATEqkDMCOVbA/FdNEPvALEVVJ4Rqp4Jn6HZUI3XgHgNEP9DMxCG/0Hlr0H52bgMFALiN3gMeYLHkjdQ/RigDovi30DcgaRBGIg7gfgPFrV12AzVhYYXssI2HL7qwBLOuriCgA+IPyF5WQCHOl4g/gFV9xGqDy/4BVX8jIC6B1B1PwkZSHWX0iRM6/HEPi+SC3HFfi2udPoWRzr8As1ZX/CkU0FcQZBDYo66DuVn0T3vYwNz0AydTY2iLxXN0NThU1UAAJ7AjlNiNxjgAAAAAElFTkSuQmCC);
+	background-position-y: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	height: 21px;
+	margin: 4px 3px 1px 3px;
+	vertical-align: top;
+	width: 21px;
+}
+
+.naviRightArea button:hover {
+	-moz-box-shadow: 0 1px 0 0 rgba(0,0,0,0.27);
+	-ms-box-shadow: 0 1px 0 0 rgba(0,0,0,0.27);
+	-webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.27);
+	box-shadow: 0 1px 0 0 rgba(0,0,0,0.27);
+	border: 1px solid rgba(0,0,0,0.27);
+	color: #333;
+	cursor: pointer;
+}
 .menuList {
 	width: 200px;
 	height: 48px;
@@ -339,15 +429,21 @@ ul {
 
 /* 컨텐츠 */
 article {
-	width: 690px;
+	width: 950px;
 	height: 100%;
 	padding-left: 280px;
 	padding-top: 20px;
 }
+
 article > section > header > span {
 	font-size: 28px;
 	color: #333;
 	margin-top: 10px;
+}
+
+article > section > header button:hover {
+	background-color: #1bb5ff;
+	box-shadow: inset 0 -2px 0 rgba(0,0,0,0.27);
 }
 article section li {
 	border-radius: 2px;
@@ -355,30 +451,57 @@ article section li {
 	height: 330px;
 	overflow: hidden;
 }
+
 article section li img {
 	width: 160px;
 	height: 240px;
 }
+
 article section li a {
+	width: 100%;
+	padding-left: 5px;
+	display: block;
+	position: relative;
 	text-decoration: none;
 }
+
 article section li a:hover {
 	text-decoration: underline;
 }
+
 article section li button {
 	border: 0;
+	padding: 10px;
+}
+
+article section li button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.pEnd {
+	background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+	background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1));
+	bottom: 0;
+	width: 45px;
+	height: 19px;
+	max-height: 100%;
+	position: absolute;
+	right: 0;
 }
 
 .item > div:nth-child(1) {
 	height: 260px;
 	background-color: #f3f3f3;
 }
+
 .item a.imgOver {
 	position: absolute;
 	width: 160px;
 	height: 260px;
 	border-radius: 2px;
 }
+
 .item a.imgOver:hover {
 	background-color: rgba(0, 0, 0, 0.3);
 }
@@ -390,6 +513,17 @@ footer {
 	padding-left: 280px;
 	padding-top: 20px;
 }
+
 footer ul {
-	width: 500px;
+	width: 1000px;
+}
+
+footer ul a {
+	color: #8d8d8d;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+footer ul a:hover {
+	text-decoration: underline;
 }
